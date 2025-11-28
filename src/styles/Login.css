@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #F3D7A2 0%, #E6B97E 60%, #D8A96A 100%);
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo da tela com tons caramelos */
+.login-container {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+/* Card central */
+.card {
+  width: 380px;
+  background: #FFF9F1; /* leve tom creme para harmonizar com caramelo */
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid #E2BB7B; /* borda caramelo clara */
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #6A4B28; /* marrom suave */
+}
+
+.input-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #C89F6E;
+  background: #FFF;
+  font-size: 14px;
+  outline: none;
+  transition: .3s;
+}
+
+.input-group input:focus {
+  border-color: #B6824D;
+  box-shadow: 0 0 6px rgba(182, 130, 77, 0.5);
+}
+
+/* Botão com caramelo mais escuro */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #C7853B;
+  border: none;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #A56A2E;
+  transform: scale(1.02);
+}
