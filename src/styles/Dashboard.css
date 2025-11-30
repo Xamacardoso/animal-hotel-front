@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #F3D7A2 0%, #E6B97E 60%, #D8A96A 100%);
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 90px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #654321;
+}
+
+.nav-link {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #654321;
+  font-weight: 600;
+}
+
+.icon-btn {
+  background: #f0d2a8;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* TÍTULO */
+.title {
+  margin-left: 90px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #553219;
+}
+
+/* GRID */
+.animals-grid {
+  display: flex;
+  gap: 30px;
+  padding: 40px 90px;
+}
+
+/* CARD ANIMAL */
+.animal-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.animal-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.animal-info {
+  padding: 15px;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #ff6961;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* ADD CARD */
+.add-card {
+  width: 300px;
+  height: 340px;
+  border: 2px dashed #cfa975;
+  background: #f6e4c3;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-content {
+  text-align: center;
+}
+
+.plus {
+  font-size: 38px;
+  color: #a67442;
+}
+
+/* EMPTY STATE */
+.empty-box {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 80%;
+  padding: 40px;
+  background: #fff9f1;
+  border: 2px solid #d9b581;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.primary-btn {
+  margin-top: 15px;
+  background: #c7853b;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -5,5 +5,5 @@ import type { ReactNode } from "react";
 export default function PrivateRoute({ children }: { children: ReactNode }) {
   const token = Cookies.get("auth_token");
 
-  return token ? children : <Navigate to="/login" />;
+  return token ? children : <Navigate to="/login" replace />;
 }
