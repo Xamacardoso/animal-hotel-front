@@ -7,8 +7,8 @@ body {
 /* HEADER */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 28px 90px;
 }
 

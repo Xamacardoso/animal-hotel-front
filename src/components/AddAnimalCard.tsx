@@ -1,10 +1,10 @@
 interface Props {
-  onAdd: () => void;
+  onClick: () => void;
 }
 
-export default function AddAnimalCard({ onAdd }: Props) {
+export default function AddAnimalCard({ onClick }: Props) {
   return (
-    <div className="add-card" onClick={onAdd}>
+    <div className="add-card" onClick={onClick}>
       <div className="add-content">
         <span className="plus">+</span>
         <p>Adicionar Novo Animal</p>

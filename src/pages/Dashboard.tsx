@@ -15,14 +15,7 @@ export default function Dashboard() {
   const [animais, setAnimais] = useState<Animal[]>([]);
   const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);
   const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    const token = Cookies.get("auth_token");
-    if (!token) window.location.href = "/login";
-
-    carregarAnimais();
-  }, []);
-
+  
   async function carregarAnimais() {
     try {
       const response = await api.get("/animals/");
@@ -33,6 +26,14 @@ export default function Dashboard() {
       window.location.href = "/login";
     }
   }
+
+  useEffect(() => {
+    const token = Cookies.get("auth_token");
+    if (!token) window.location.href = "/login";
+
+    carregarAnimais();
+  }, []);
+
 
   function logout() {
     Cookies.remove("auth_token");
@@ -72,7 +73,7 @@ export default function Dashboard() {
           onClose={() => setShowModal(false)} 
           onSuccess={() => {
             setShowModal(false);
-            carregarAnimais(); // atualiza a lista
+            carregarAnimais();
           }}
         />
       )}

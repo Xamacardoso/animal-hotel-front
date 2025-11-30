@@ -1,10 +1,12 @@
 import { useState } from "react";
+import "../styles/ModalCadastrarAnimal.css";
 
 interface ModalProps {
   onClose: () => void;
+  onSuccess: () => void;
 }
 
-export default function ModalCadastrarAnimal({ onClose }: ModalProps) {
+export default function ModalCadastrarAnimal({ onClose, onSuccess }: ModalProps) {
   const [form, setForm] = useState({
     nome: "",
     especie: "",
@@ -44,61 +46,28 @@ export default function ModalCadastrarAnimal({ onClose }: ModalProps) {
   };
 
   return (
-    <div style={styles.overlay}>
-      <div style={styles.modal}>
+    <div className="modal-overlay">
+      <div className="modal-container">
         <h2>Cadastrar Novo Animal</h2>
 
-        <form onSubmit={handleSubmit} style={styles.form}>
-          <input name="nome" placeholder="Nome" onChange={handleChange} required />
-          <input name="especie" placeholder="Espécie" onChange={handleChange} required />
-          <input name="raca" placeholder="Raça" onChange={handleChange} required />
-          <input name="idade" type="number" placeholder="Idade" onChange={handleChange} required />
+        <form onSubmit={handleSubmit} className="modal-form">
+          <input className="modal-input" name="nome" placeholder="Nome" onChange={handleChange} required />
+          <input className="modal-input" name="especie" placeholder="Espécie" onChange={handleChange} required />
+          <input className="modal-input" name="raca" placeholder="Raça" onChange={handleChange} required />
+          <input className="modal-input" name="idade" type="number" placeholder="Idade" onChange={handleChange} required />
 
-          <input name="observacao" placeholder="Observação" onChange={handleChange} />
+          <input className="modal-input" name="observacao" placeholder="Observação" onChange={handleChange} />
 
-          <select name="genero" onChange={handleChange}>
+          <select className="modal-input" name="genero" onChange={handleChange}>
             <option value="M">Macho</option>
             <option value="F">Fêmea</option>
           </select>
 
-          <button type="submit">Cadastrar</button>
+          <button className="primary-btn" type="submit" onClick={onSuccess}>Cadastrar</button>
         </form>
 
-        <button onClick={onClose} style={styles.closeBtn}>Fechar</button>
+        <button onClick={onClose} className="modal-close-btn">Fechar</button>
       </div>
     </div>
   );
 }
-
-const styles = {
-  overlay: {
-    position: "fixed" as const,
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "rgba(0,0,0,0.4)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  modal: {
-    background: "white",
-    padding: "20px",
-    borderRadius: "10px",
-    width: "400px",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column" as const,
-    gap: "10px",
-  },
-  closeBtn: {
-    marginTop: "10px",
-    background: "#d9534f",
-    color: "white",
-    border: "none",
-    padding: "10px",
-    cursor: "pointer",
-  },
-};
